@@ -3,13 +3,9 @@
 webMethods.io Integration CLI Tool
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
-  
 │ webMethods.io Integration API CLI tool                                       │
-  
 │ This tool provides command line access to the webMethods.io Integration APIs │
-  
 │ Intended to aid usage within DevOps Scenarios for asset deployment           │
-  
 └──────────────────────────────────────────────────────────────────────────────┘
   
 
