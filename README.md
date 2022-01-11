@@ -1,3 +1,7 @@
+# Supported Verisons
+This tool has been tested against
+* webMethods.io v10.11
+
 # Installation
 ```
 git clone https://github.com/dpembo/wmiocli.git

@@ -1,3 +1,9 @@
+01 /*
+02  * webMethods.io CLI
+03  * Copyright 2021 Software AG
+04  * Apache-2.0
+05  */
+
 var project = require('./projects.js');
 var wf = require('./workflow.js');
 var dbg = require('./debug.js');
