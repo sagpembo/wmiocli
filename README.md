@@ -1,4 +1,4 @@
-<code>
+```
 # wmiocli
 webMethods.io Integration CLI Tool
 
@@ -149,4 +149,4 @@ Examples:
     -u user
     -p password
     flowservice-execute fl65d3aa87fc1783ea5cf8c8 myFlowService
-</code>
+```
