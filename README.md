@@ -1,4 +1,4 @@
-#Installation
+# Installation
 ```
 git clone https://github.com/dpembo/wmiocli.git
 cd wmiocli
@@ -6,7 +6,7 @@ npm install
 node wmiocli.js --help
 ```
 
-#Usage
+# Usage
 
 ```
 # wmiocli
