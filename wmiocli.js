@@ -41,9 +41,111 @@ program
 
   .addHelpText('after', `
 
-Example call:
-  $ wmiocli --help`)
+Examples:
 
+  \x1b[4mHelp\x1b[0m
+
+  \x1b[32mShow the command line help:\x1b[0m
+  $ node wmiocli.js --help
+
+
+  \x1b[4mProjects\x1b[0m
+
+  \x1b[32mList projects in a tenant:\x1b[0m
+  $ node wmiocli.js -d tenant.int-aws-us.webmethods.io -u user -p password project
+
+  \x1b[32mView individual project using project ID (indentified from URL in webMethods.io when in a project, i.e. https://tenant.int-aws-us.webmethods.io/#/projects/\x1b[1mfl65d3aa87fc1783ea5cf8c8\x1b[32m/workflows):\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user 
+    -p password 
+    project
+  
+  \x1b[32mUpdate Project name:\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user 
+    -p password 
+    project-update fl65d3aa87fc1783ea5cf8c8 "my New Name"
+
+  \x1b[32mDelete Project:\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user 
+    -p password 
+    project-delete fl65d3aa87fc1783ea5cf8c8
+  
+
+  \x1b[4mWorkflow\x1b[0m
+
+  \x1b[32mExport Workflow from a given project (identified from URL in webMethods.io when in workflow canvas, 
+  i.e. https://tenant.int-aws-us.webmethods.io/#/projects/\x1b[1mfl65d3aa87fc1783ea5cf8c8\x1b[0m\x1b[32m/workflows/\x1b[1mfl52232a2dfafbd6536963d7\x1b[0m\x1b[32m/edit):\x1b[0m\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    workflow-export fl65d3aa87fc1783ea5cf8c8 fl52232a2dfafbd6536963d7 export.zip
+
+  \x1b[32mImport Workflow from a given file into a project \x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    workflow-import fl65d3aa87fc1783ea5cf8c8 export.zip
+
+  \x1b[32mDelete Workflow from a given project\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    workflow-delete fl65d3aa87fc1783ea5cf8c8 fl52232a2dfafbd6536963d7
+
+  \x1b[32mExecute a Workflow from a given project\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    workflow-execute fl65d3aa87fc1783ea5cf8c8 fl52232a2dfafbd6536963d7          
+
+  \x1b[32mGet Workflow execution status from a given project\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    workflow-status fl65d3aa87fc1783ea5cf8c8 vbid3d247cd26aa5e19354e1fc6951766a3d19c049bee11d   
+          
+          
+  \x1b[4mFlowService\x1b[0m
+
+  \x1b[32mExport FlowService from a given project (identified from URL in webMethods.io when in FlowEditor
+  i.e. https://tenant.int-aws-us.webmethods.io/#/projects/\x1b[1mfl65d3aa87fc1783ea5cf8c8\x1b[0m\x1b[32m/flow-editor/\x1b[1mmyFlowService\x1b[0m\x1b[32m):\x1b[0m\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    flowservice-export fl65d3aa87fc1783ea5cf8c8 myFlowService export.zip
+
+  \x1b[32mImport Flowservice from a given file into a project \x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    flowservice-import fl65d3aa87fc1783ea5cf8c8 export.zip
+
+  \x1b[32mDelete FlowService from a given project\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    flowservice-delete fl65d3aa87fc1783ea5cf8c8 myFlowService
+
+  \x1b[32mExecute a FlowService from a given project\x1b[0m
+  $ node wmiocli.js 
+    -d tenant.int-aws-us.webmethods.io 
+    -u user
+    -p password 
+    flowservice-execute fl65d3aa87fc1783ea5cf8c8 myFlowService             
+`)
 
   .showSuggestionAfterError()
 ;
